@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "[+] unmount portage directory"
+umount /usr/portage
+
+echo "[+] downloading portage tree"
+wget http://arya.maxux.net/build/portage/portage.squashfs -O /opt/portage.squashfs
+
+echo "[+] mounting portage directory"
+mount /opt/portage.squashfs /usr/portage

@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "[+] building new portage squashfs"
+mksquashfs /usr/portage/ /var/www/build/portage/portage.squashfs.new -e /usr/portage/distfiles/
+
+echo "[+] committing update"
+mv /var/www/build/portage/portage.squashfs.new /var/www/build/portage/portage.squashfs
