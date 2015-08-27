@@ -7,3 +7,6 @@ wget http://arya.maxux.net/build/portage/portage.squashfs -O /opt/portage.squash
 
 echo "[+] mounting portage directory"
 mount /opt/portage.squashfs /usr/portage
+
+echo "[+] updating eix database"
+eix-update
